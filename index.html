@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+  .markdown-body {
+    width: 800px;
+    margin: 0 auto;
+  }
+  </style>
+</head>
+<body>
+<div class="markdown-body orange"><h2>MDTU 简介</h2>
+<p>Markdown Devtool，简称 <code>MDTU</code>。是一款基于 <a href="https://github.com/bytedance/bytemd">bytemd</a><sup id="user-content-fnref-bytemd"><a href="#fn-bytemd" class="footnote-ref">[1]</a></sup> 由山月开发的支持微信样式的 Markdown 编辑器。</p>
+<h2>粗体斜体</h2>
+<p><strong>这个是粗体</strong></p>
+<p><em>这个是斜体</em></p>
+<p><strong><em>这个是粗体加斜体</em></strong></p>
+<h2>引用</h2>
+<blockquote>
+<p>欲穷千里目，更上一层楼</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>举头望明月，低头思故乡</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>今春看又过，何日是归年</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>代码</h2>
+<p><strong>内联代码</strong></p>
+<p><code>import</code></p>
+<p><strong>代码段</strong></p>
+<pre><code class="language-js hljs javascript"><span class="hljs-comment">// 如何实现一个防抖函数</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span> (<span class="hljs-params">f, wait</span>) </span>{
+  <span class="hljs-keyword">let</span> timer
+  <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> {
+    <span class="hljs-built_in">clearTimeout</span>(timer)
+    timer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> f(...args), wait)
+  }
+}
+</code></pre>
+<h2>标题</h2>
+<p>以下是关于标题的样式</p>
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h2>外链</h2>
+<p>这里是<a href="https://shanyue.tech">山月的博客</a><sup id="user-content-fnref-山月的博客"><a href="#fn-山月的博客" class="footnote-ref">[1]</a></sup>，这里是山月进行了多年面试总结的<a href="https://q.shanyue.tech">前端面试题</a><sup id="user-content-fnref-前端面试题"><a href="#fn-前端面试题" class="footnote-ref">[1]</a></sup>。</p>
+<p>您可以点击编辑器右上角进行<strong>微信外链转脚注</strong>与<strong>微信外链转二维码</strong>，并点击右上角微信图标进行复制。</p>
+<p>这里是<a href="shanyue.tech">山月的博客 (不显示二维码)</a>，这里是山月进行了多年面试总结的<a href="q.shanyue.tech">前端面试题 (不显示二维码)</a>。</p>
+<p>如果链接地址不是以 <code>http</code> 开头，则不会显示它的二维码。</p>
+<h2>URL to Markdown</h2>
+<p>您可以点击 MDTU 编辑器右上角<strong>链接采集按钮</strong>，输入 URL 回车确认可从 URL 中获取 Markdown。</p>
+<picture><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/23487fbd375e42c8b1ac6410c89fb656~tplv-k3u1fbpfcp-watermark.image" alt="链接采集" class="medium-zoom-image"><figcaption>链接采集</figcaption></picture>
+<h2>多主题</h2>
+<p>UI 样式正在持续开发中。您可以添加我的微信 <code>shanyue94</code> 加入 Markdown Devtool 技术交流群进行交流。</p>
+<h2>赞赏</h2>
+<p>如果该工具对你有所帮助，可以请我喝一瓶<del>农夫山泉</del>冰露 (别人说农夫山泉太奢侈，这里改成冰露吧)</p>
+<picture><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/263bac43ead842bab0efbf6a431f4e32~tplv-k3u1fbpfcp-watermark.image" alt="请我喝一瓶冰露" class="medium-zoom-image"><figcaption>请我喝一瓶冰露</figcaption></picture>
+<h2>交流</h2>
+<p>欢迎扫码添加我的微信，加入 MDTU 编辑器交流群</p>
+<picture><img src="https://shanyue.tech/wechat.jpeg" alt="shanyue94" class="medium-zoom-image"><figcaption>shanyue94</figcaption></picture>
+<div class="footnotes">
+<hr>
+<ol>
+<li id="user-content-fn-bytemd">bytemd: https://github.com/bytedance/bytemd<a href="#fnref-bytemd" class="footnote-backref">↩</a></li>
+<li id="user-content-fn-山月的博客">山月的博客: https://shanyue.tech<a href="#fnref-%E5%B1%B1%E6%9C%88%E7%9A%84%E5%8D%9A%E5%AE%A2" class="footnote-backref">↩</a></li>
+<li id="user-content-fn-前端面试题">前端面试题: https://q.shanyue.tech<a href="#fnref-%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98" class="footnote-backref">↩</a></li>
+</ol>
+</div><!--6--></div>
+<script>
+  const theme = location.hash.slice(1)
+  window.onload = () => {
+    if (theme) {
+      const style = document.createElement('link')
+      style.rel = 'stylesheet' 
+      style.href = `./themes/${theme}.css`
+      document.head.appendChild(style)
+    }
+  }
+</script>
+</body>
+</html>

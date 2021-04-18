@@ -1,0 +1,37 @@
+{
+  "name": "markdown-theme",
+  "version": "0.0.1",
+  "description": "Themes for markdown",
+  "main": "index.js",
+  "files": [
+    "src",
+    "themes"
+  ],
+  "scripts": {
+    "dev": "serve",
+    "watch": "gulp css:dev",
+    "build": "gulp css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shfshanyue/markdown-themes.git"
+  },
+  "keywords": [
+    "markdown",
+    "markdown-styles",
+    "markdown-themes"
+  ],
+  "author": "shfshanyue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shfshanyue/markdown-themes/issues"
+  },
+  "homepage": "https://github.com/shfshanyue/markdown-themes#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "postcss": "^8.2.10",
+    "precss": "^4.0.0",
+    "serve": "^11.3.2"
+  }
+}
