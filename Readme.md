@@ -4,7 +4,13 @@
 
 # Markdown Themes
 
-1. github. (fork from https://github.com/sindresorhus/github-markdown-css)
+Use [precss](https://github.com/jonathantneal/precss) (- sass like syntax) and [tailwindcss](https://tailwindcss.com/) develop markdown themes.
+
+| Theme    | Author    |  Preview   |
+| --- | --- | --- |
+| github    |   [sindresorhus/github-markdown-css](https://github.com/sindresorhus/github-markdown-css)  |   [Preview](https://markdown-theme.vercel.app/#github)  |
+| shanchui    | [#66CCFF](https://github.com/elyhg)    |   [Preview](https://markdown-theme.vercel.app/#shanchui)  |
+| shanyue    | [shanyue](https://github.com/shfshanyue)    |   [Preview](https://npm.devtool.tech/lodash)  |
 
 ## Usage
 
@@ -27,7 +33,8 @@ import 'markdown-theme/themes/github'
 ## Development
 
 1. `npm run watch` and `npm run dev` in another
-1. Write css to src dictionry with sass-like syntax (precss) 
+1. Write css to src dictionry optionaly with sass-like syntax (precss) and tailwindcss
 1. Go to `http://localhost:5000#THEME_PATH` preview, eg. `http://localhost:5000/github`
 1. `npm run build`
 1. Sumbit a PR
+

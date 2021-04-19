@@ -33,5 +33,8 @@
     "postcss": "^8.2.10",
     "precss": "^4.0.0",
     "serve": "^11.3.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.1.1"
   }
 }

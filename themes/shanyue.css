@@ -1,0 +1,182 @@
+.markdown-body {
+  color: #595959;
+  font-size: 16px;
+  line-height: 1.8em;
+  background-image: linear-gradient(90deg,rgba(60,10,30,.05) 3%,transparent 0),linear-gradient(1turn,rgba(60,10,30,.05) 3%,transparent 0);
+  background-size: 20px 20px;
+  background-position: 50%;
+  word-break: break-all;
+}
+
+/* 思维导图 */
+
+.markdown-body .svg-markmap-box {
+  min-height: 20rem;
+  width: 100%;
+}
+
+/* 二维码框 */
+
+.markdown-body .qrcode-box {
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: rgba(113,128,150, 1);
+  background-color: rgb(246,246,246);
+  border: 1px solid #efefef;
+  min-height: 122px;
+}
+
+.markdown-body h1, .markdown-body h2 {
+  border-style: solid;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  font-weight: 500;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-left-width: 6px;
+}
+
+.bytemd .markdown-body h1,
+.bytemd .markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+}
+
+.markdown-body blockquote {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body strong::before {
+  content: '「';
+}
+
+.markdown-body strong::after {
+  content: '」';
+}
+
+.markdown-body code, .markdown-body a {
+  font-weight: 500;
+}
+
+.markdown-body code,
+.markdown-body a {
+  font-size: unset;
+}
+
+.markdown-body a:hover {
+  text-decoration: none;
+}
+
+.markdown-body a {
+  border-bottom: 1px solid;
+}
+
+.markdown-body .footnote-ref {
+  border-width: 0px;
+}
+
+.markdown-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.markdown-body pre > code {
+  font-weight: 400;
+  color: unset;
+  line-height: 1.6;
+}
+
+.markdown-body picture img {
+  border-radius: 6px;
+  width: 100%;
+  display: block;
+  margin: 10px auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  box-shadow: 2px 4px 7px #999;
+}
+
+.markdown-body picture {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.markdown-body blockquote .qrcode-box {
+  background-color: transparent;
+  border: 1px solid #e3e3e3;
+}
+
+.markdown-body .qrcode-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  word-break: break-all;
+  width: calc(100% - 96px);
+}
+
+.markdown-body .qrcode-text span {
+  height: 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.markdown-body .qrcode-img {
+  width: 90px;
+  height: 90px;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+.markdown-body .qrcode-box p {
+  margin: 0px;
+}
+
+.markdown-body pre,
+.markdown-body pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  color: #abb2bf;
+  background: #282c34;
+  padding: 0;
+}
+
+.markdown-body pre code.hljs {
+  padding: 12px;
+  padding-top: 6px;
+}
+
+.markdown-body pre::before {
+  content: '';
+  display: block;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDU0IDE0Ij4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEgMSkiPgogICAgPGNpcmNsZSBjeD0iNiIgY3k9IjYiIHI9IjYiIGZpbGw9IiNGRjVGNTYiIHN0cm9rZT0iI0UwNDQzRSIgc3Ryb2tlLXdpZHRoPSIuNSIvPgogICAgPGNpcmNsZSBjeD0iMjYiIGN5PSI2IiByPSI2IiBmaWxsPSIjRkZCRDJFIiBzdHJva2U9IiNERUExMjMiIHN0cm9rZS13aWR0aD0iLjUiLz4KICAgIDxjaXJjbGUgY3g9IjQ2IiBjeT0iNiIgcj0iNiIgZmlsbD0iIzI3QzkzRiIgc3Ryb2tlPSIjMUFBQjI5IiBzdHJva2Utd2lkdGg9Ii41Ii8+CiAgPC9nPgo8L3N2Zz4K");
+  height: 30px;
+  width: 100%;
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-color: #282c34;
+  margin-bottom: -7px;
+  border-radius: 5px;
+  background-position: 10px 10px;
+}
+
