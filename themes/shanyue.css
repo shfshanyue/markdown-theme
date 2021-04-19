@@ -128,8 +128,7 @@
   justify-content: space-around;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  --tw-text-opacity: 1;
-  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  color: #4b5563;
   word-break: break-all;
   width: calc(100% - 96px);
 }

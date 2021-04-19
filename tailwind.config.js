@@ -12,4 +12,12 @@ module.exports = {
   },
   variants: {},
   plugins: [],
+  corePlugins: {
+    textOpacity: false,
+    backgroundOpacity: false,
+    borderOpacity: false,
+    ringOpacity: false,
+    divideOpacity: false,
+    placeholderOpacity: false,
+  }
 }
