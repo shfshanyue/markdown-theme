@@ -1,6 +1,6 @@
 {
   "name": "markdown-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Themes for markdown",
   "main": "index.js",
   "files": [
