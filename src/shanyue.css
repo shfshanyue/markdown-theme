@@ -1,3 +1,225 @@
+.markdown-body h1,
+.markdown-body h2 {
+  @apply border-indigo-600;
+} 
+
+.markdown-body blockquote {
+  @apply bg-indigo-100 border-indigo-400 py-2 text-indigo-500;
+}
+
+.markdown-body strong {
+  @apply text-indigo-600;
+}
+
+.markdown-body code,
+.markdown-body a {
+  @apply text-indigo-600;
+}
+
+.markdown-body a {
+  @apply border-indigo-500;
+}
+
+.markdown-body code {
+  @apply bg-indigo-100;
+}
+
+.markdown-body.indigo h1,
+.markdown-body.indigo h2 {
+  @apply border-indigo-600;
+} 
+
+.markdown-body.indigo blockquote {
+  @apply bg-indigo-100 border-indigo-400 py-2 text-indigo-500;
+}
+
+.markdown-body.indigo strong {
+  @apply text-indigo-600;
+}
+
+.markdown-body.indigo code,
+.markdown-body.indigo a {
+  @apply text-indigo-600;
+}
+
+.markdown-body.indigo a {
+  @apply border-indigo-500;
+}
+
+.markdown-body.indigo code {
+  @apply bg-indigo-100;
+}
+
+
+.markdown-body.red h1,
+.markdown-body.red h2 {
+  @apply border-red-600;
+} 
+
+.markdown-body.red blockquote {
+  @apply bg-red-100 border-red-400 py-2 text-red-500;
+}
+
+.markdown-body.red strong {
+  @apply text-red-600;
+}
+
+.markdown-body.red code,
+.markdown-body.red a {
+  @apply text-red-600;
+}
+
+.markdown-body.red a {
+  @apply border-red-500;
+}
+
+.markdown-body.red code {
+  @apply bg-red-100;
+}
+
+
+.markdown-body.blue h1,
+.markdown-body.blue h2 {
+  @apply border-blue-600;
+} 
+
+.markdown-body.blue blockquote {
+  @apply bg-blue-100 border-blue-400 py-2 text-blue-500;
+}
+
+.markdown-body.blue strong {
+  @apply text-blue-600;
+}
+
+.markdown-body.blue code,
+.markdown-body.blue a {
+  @apply text-blue-600;
+}
+
+.markdown-body.blue a {
+  @apply border-blue-500;
+}
+
+.markdown-body.blue code {
+  @apply bg-blue-100;
+}
+
+
+
+.markdown-body.orange h1,
+.markdown-body.orange h2 {
+  @apply border-orange-600;
+} 
+
+.markdown-body.orange blockquote {
+  @apply bg-orange-100 border-orange-400 py-2 text-orange-500;
+}
+
+.markdown-body.orange strong {
+  @apply text-orange-600;
+}
+
+.markdown-body.orange code,
+.markdown-body.orange a {
+  @apply text-orange-600;
+}
+
+.markdown-body.orange a {
+  @apply border-orange-500;
+}
+
+.markdown-body.orange code {
+  @apply bg-orange-100;
+}
+
+
+.markdown-body.green h1,
+.markdown-body.green h2 {
+  @apply border-green-600;
+} 
+
+.markdown-body.green blockquote {
+  @apply bg-green-100 border-green-400 py-2 text-green-500;
+}
+
+.markdown-body.green strong {
+  @apply text-green-600;
+}
+
+.markdown-body.green code,
+.markdown-body.green a {
+  @apply text-green-600;
+}
+
+.markdown-body.green a {
+  @apply border-green-500;
+}
+
+.markdown-body.green code {
+  @apply bg-green-100;
+}
+
+
+.markdown-body.purple h1,
+.markdown-body.purple h2 {
+  @apply border-purple-600;
+} 
+
+.markdown-body.purple blockquote {
+  @apply bg-purple-100 border-purple-400 py-2 text-purple-500;
+}
+
+.markdown-body.purple strong {
+  @apply text-purple-600;
+}
+
+.markdown-body.purple code,
+.markdown-body.purple a {
+  @apply text-purple-600;
+}
+
+.markdown-body.purple a {
+  @apply border-purple-500;
+}
+
+.markdown-body.purple code {
+  @apply bg-purple-100;
+}
+
+.markdown-body.pink h1,
+.markdown-body.pink h2 {
+  @apply border-pink-600;
+} 
+
+.markdown-body.pink blockquote {
+  @apply bg-pink-100 border-pink-400 py-2 text-pink-500;
+}
+
+.markdown-body.pink strong {
+  @apply text-pink-600;
+}
+
+.markdown-body.pink code,
+.markdown-body.pink a {
+  @apply text-pink-600;
+}
+
+.markdown-body.pink a {
+  @apply border-pink-500;
+}
+
+.markdown-body.pink code {
+  @apply bg-pink-100;
+}
+.popup-arrow {
+  @apply text-gray-500;
+}
+
+.bytemd {
+  height: calc(100vh - 45px);
+  margin: 0 1px;
+}
+
 .markdown-body {
   color: #595959;
   font-size: 16px;
@@ -8,39 +230,51 @@
   word-break: break-all;
 }
 
-/* 思维导图 */
-.markdown-body .svg-markmap-box {
-  @apply w-full min-h-80;
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  @apply mb-4;
 }
 
-/* 二维码框 */
-.markdown-body .qrcode-box {
-  border-radius: 0.25rem;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: rgba(113,128,150, 1);
-  background-color: rgb(246,246,246);
-  border: 1px solid #efefef;
-  min-height: 122px;
+.markdown-body ol {
+  list-style: decimal;
 }
 
+.markdown-body ul {
+  list-style: disc;
+}
+
+.markdown-body ol, .markdown-body ul {
+  padding-left: 2em;
+}
 
 .markdown-body h1,
 .markdown-body h2 {
   @apply font-medium pl-3 py-1 border-solid border-t-0 border-r-0;
+  border-bottom: 1px solid #eaecef !important;
   border-left-width: 6px;
 }
 
-.bytemd .markdown-body h1,
-.bytemd .markdown-body h2 {
-  border-bottom: 1px solid #eaecef;
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  margin-bottom: 16px;
+  line-height: 1.25;
 }
 
 .markdown-body blockquote {
-  @apply py-2;
+  @apply py-2 px-4;
+  border-left: .25em solid;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
 }
 
 .markdown-body strong {
@@ -62,7 +296,7 @@
 }
 
 .markdown-body a {
-  @apply hover:no-underline;
+  @apply no-underline;
   border-bottom: 1px solid;
 }
 
@@ -82,7 +316,6 @@
 
 .markdown-body picture img {
   border-radius: 6px;
-  width: 100%;
   display: block;
   margin: 10px auto;
   object-fit: contain;
@@ -96,6 +329,23 @@
   align-items: center;
   margin-top: 6px;
   margin-bottom: 6px;
+}
+
+.markdown-body blockquote {
+
+}
+
+.markdown-body .qrcode-box {
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: rgba(113,128,150, 1);
+  background-color: rgb(246,246,246);
+  border: 1px solid #efefef;
+  min-height: 122px;
 }
 
 .markdown-body blockquote .qrcode-box {
@@ -151,3 +401,17 @@
   background-position: 10px 10px;
 }
 
+.markdown-body .svg-markmap-box {
+  @apply w-full min-h-80;
+}
+
+.markdown-body .footnote-backref {
+  @apply hidden;
+}
+
+.markdown-body .footnotes {
+  @apply py-2;
+}
+
+.markdown-body .footnotes hr:first-child {
+}
