@@ -13,5 +13,13 @@
   "condensed-night-purple": {
     "name": "condensed-night-purple",
     "cn": "凝夜紫"
+  },
+  "chocolate": {
+    "name": "chocolate",
+    "cn": "巧克力"
+  },
+  "v-green": {
+    "name": "v-green",
+    "cn": "微绿"
   }
 }

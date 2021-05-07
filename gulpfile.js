@@ -6,8 +6,8 @@ const gulp = require('gulp')
 gulp.task('css', function () {
   return gulp.src('./src/*.css').pipe(
     postcss([
-      tailwind(),
       precss(),
+      tailwind(),
     ])
   ).pipe(
     gulp.dest('themes')

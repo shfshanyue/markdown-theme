@@ -335,44 +335,6 @@
 
 }
 
-.markdown-body .qrcode-box {
-  border-radius: 0.25rem;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: rgba(113,128,150, 1);
-  background-color: rgb(246,246,246);
-  border: 1px solid #efefef;
-  min-height: 122px;
-}
-
-.markdown-body blockquote .qrcode-box {
-  background-color: transparent;
-  border: 1px solid #e3e3e3;
-}
-
-.markdown-body .qrcode-text {
-  @apply flex text-sm flex-col justify-around break-all text-gray-600;
-  width: calc(100% - 96px);
-}
-
-.markdown-body .qrcode-text span {
-  @apply truncate h-5;
-}
-
-.markdown-body .qrcode-img {
-  width: 90px;
-  height: 90px;
-  margin-left: 4px;
-  flex-shrink: 0;
-}
-
-.markdown-body .qrcode-box p {
-  @apply m-0;
-}
-
 .markdown-body pre,
 .markdown-body pre code.hljs {
   display: block;
