@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "serve",
     "watch": "gulp css:dev",
-    "build": "gulp css"
+    "build": "gulp css",
+    "prepare": "gulp css"
   },
   "repository": {
     "type": "git",
@@ -28,8 +29,11 @@
   },
   "homepage": "https://github.com/shfshanyue/markdown-themes#readme",
   "devDependencies": {
+    "clean-css": "^5.1.2",
     "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
     "postcss": "^8.2.10",
     "precss": "^4.0.0",
     "serve": "^11.3.2",
