@@ -65,12 +65,9 @@
 .markdown-body blockquote {
   background: #fff5e3;
   display: block;
-  font-size: 0.9em;
   overflow: auto;
-  overflow-scrolling: touch;
   border-left: 3px solid rgba(0, 0, 0, 0.4);
   border-left-color: #ffb11b;
-  background: rgba(0, 0, 0, 0.05);
   color: #6a737d;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -78,10 +75,14 @@
   padding-right: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
+  border-left-color: #ffb11b;
+  background: #fff5e3;
 }
 
 .markdown-body blockquote p {
   color: #595959;
+  margin: 0;
+  line-height: 26px;
 }
 
 .markdown-body a {

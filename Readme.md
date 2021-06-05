@@ -36,6 +36,6 @@ import 'markdown-theme/themes/github'
 
 1. `npm run watch` and `npm run dev` in another
 1. Write css to src dictionry optionaly with sass-like syntax (precss) and tailwindcss
-1. Go to `http://localhost:5000#THEME_PATH` preview, eg. `http://localhost:5000/github`
+1. Go to `http://localhost:5000#THEME_PATH` preview, eg. `http://localhost:5000#github`
 1. `npm run build`
 1. Sumbit a PR

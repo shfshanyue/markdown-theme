@@ -1,89 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <style>
-  .markdown-body {
-    width: 800px;
-    margin: 0 auto;
-  }
+    .markdown-body {
+      width: 800px;
+      margin: 0 auto;
+    }
+
+    .popup-arrow {
+      --tw-text-opacity: 1;
+      color: rgba(160, 174, 192, var(--tw-text-opacity));
+    }
+
+    .bytemd {
+      height: calc(100vh - 45px);
+      margin: 0 1px;
+    }
+
+    .markdown-body h1 {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 600;
+    }
+
+    .markdown-body h2 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: 500;
+    }
+
+    .markdown-body h3 {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      font-weight: 500;
+    }
+
+    .markdown-body .heading-number {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .markdown-body picture img {
+      border-radius: 6px;
+      display: block;
+      margin: 10px auto;
+      object-fit: contain;
+      box-shadow: 2px 4px 7px #999;
+    }
+
+    .markdown-body picture {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+
+    .markdown-body .qrcode-box {
+      border-radius: 0.25rem;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      color: rgba(113, 128, 150, 1);
+      background-color: rgb(246, 246, 246);
+      border: 1px solid #efefef;
+    }
+
+    .markdown-body blockquote .qrcode-box {
+      background-color: transparent;
+      border: 1px solid #e3e3e3;
+    }
+
+    .markdown-body .qrcode-text {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: space-around;
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: space-around;
+      justify-content: space-around;
+      word-break: break-all;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      width: calc(100% - 96px);
+      color: #718096;
+    }
+
+    .markdown-body .qrcode-text span {
+      height: 1.25rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .markdown-body .qrcode-img {
+      width: 90px;
+      height: 90px;
+      margin-left: 4px;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+    }
+
+    .markdown-body .qrcode-img img {
+      margin: auto;
+    }
+
+    .markdown-body .qrcode-box p {
+      margin: 0px;
+    }
+
+    .markdown-body pre {
+      border-radius: 0.375rem;
+      --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .markdown-body pre,
+    .markdown-body pre code.hljs {
+      display: block;
+      overflow-x: auto;
+      color: #abb2bf;
+      background: #282c34;
+      padding: 0;
+    }
+
+    .markdown-body pre code.hljs {
+      padding: 12px;
+      padding-top: 6px;
+      font-size: 0.85em;
+    }
+
+    .markdown-body pre::before {
+      content: '';
+      display: block;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAcCAYAAACERFoMAAAFdklEQVRoQ+2aTWwTRxiGv5nddez1/jjGAYJDEwhSCRzDjUKDgFagVAgQ7aURvVDEFXFFCHGlXBHiUkQvLSIIkYLagBpA3MgR0koEEogJEMfx/njX8e7OVLuOU0jjkKzXaSOtzzuzj+fd79U7Mx+C8LeiVgAtlvZxZye3plHcboPTgSik3HEUQZYFZujtlPZo2+Cgtdi56vHc40ud3Cpe2U4c0oEQKvNRmsUMHpo05Efbjv+3fJ2XOrm3ycJ2SlEHoPL6AYUsQnRoLBd/BIvk+6hgI7s/38Uw6CShdB/LMlqE4yIsg2Pu+2yHmCXLKtm2I2KE7jgOvdB27/4f9RCk2pzPrrTv4lw+QvdxLNYiESbCMjDDB2ap5JQsm4gYozuWQy9sOjq8rHzpnz/dBRx7kjpkH8OxGo6wEcSW14/axCQlu+RYtogYfAc5zg9jR/4cWGj9qgo28uWOZkSYyxjDTlkUxHgsChjjeecihEDBLIKi6Roh8IBi51jbbw/H6yncyNXWZgD2MgK0MyFxosCzgPH8f4cQCrphQ161NAr0AYB9rK1ntK58rdc7mm3AlwHBzgYpLrLxKKAqfJRQsApFKKkFDQDuswXy/WjP0Lx88/5Dt6oQhl5J4OWEJH60Ct8XJq9qVNUNhRI4VK9qc6uKRdAriZzcKEWWxDellqiqWYpN4VC9qs2rKpbp5cSY3CALS+KbVnRqqaaCKDk4X7X9a7IZsfpTjTLDx6K+isQwi5CdUhxKYG/QorliMQj6m5INTDzG+uIrmDZM5KYdh8LeoEVzxaIM7o+tkhmWb/DFZxvTYGYVBwPdM1e0DwQr2yB+mmqUE37FqhDOiJanmGwJyh49G6Ts01SyIeFXrAqfK1o2N50HZG8Jyh7LNoieRpNSwq9YFT5XtOKkmmcR3TJ6+B97/ECw0b1dfZIQ279UG6z2GZXt0bzd2j/Q7etTmzNo5Gp7nyRw+5dqg9Xe7dmjbt1u6xkOhC99fWsfJ0b3L9UGq/F59qgXf80cevJV5ZlZwbw0yKKbLWtXi0EsbmWOsTfvNMemB2q1Ri8NYnTzk3V8oHwvXxuaReiBWq1xJg3eFNKpQPn0TFYDyz6Q+eYvL93OCvbqi65bsiR0i3E+SL1AKxigqHrf+t8HZr8SPy8Y/WnTrYTIdUsC52d41TGqbkFes/pav31WE1+6d+utBinezYleYg/sZ2kmTKuFvkqVeYK5m+KmpGC2rG1iqkV3vwRu5B97M+FM5PSY3821tymO5c1PmnmmWnT3z0fh5bjhTJqJmN/NtbspHk8aptDSxFSL7n753Mivj004zTk+Nnh80PIEe7Wnqwtz+Ma61amE34kXGvf6XTZPLHJw/d2BBTeF1eZ4cXVTF8egG+k1sbrwZd6aecuhBzf0PPPF13JtcxfiuBt8c7IufMZ4Lk8ty4v5nmAv9uw4IfD8+VSjHKwfziiQnVIM3TBObbj78KKfD2L4x40nRCFyvqkxUhe+iamSoemlU+3fPffFl/6l4wQrRM9HV0l14StOqoatF09lvh666Ak2snvHaVkSzgaVDueK4qZFRdXPtN17eM6PYM+vtJ9OSNzZoNLhXAY3LeZV68zGo8O++NLXOk5zMn82qHQ4l89Li4pxJnNk6FwoGACsOMFCS1xhlhiGjhUWOsJYv8JivRftw43zytk4l5NieDTlJ8FWxiz70ZT74vDwtxbJAOpy+KsVb2cOP5k9nA6vV/7P1ys5Nc/CAtcrFWtEGMILTJ/FFtgF5qTiYPqRC8wKY9gi4FOtmWE1twhopoLIIlsEZkULm3BqUm1Zm3DeJw3b3GrSDZatzW0uZthIWptw7p3Zm4T+GSC8ua6NpLVhhqODXoG/AV56X1lhWm2vAAAAAElFTkSuQmCC");
+      height: 30px;
+      width: 100%;
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-color: #282c34;
+      margin-bottom: -7px;
+      border-radius: 5px;
+      background-position: 10px 10px;
+    }
+
+    .markdown-body .svg-markmap-box {
+      min-height: 20rem;
+      width: 100%;
+    }
+
+    .markdown-body .footnote-backref {
+      display: none;
+    }
+
+    .markdown-body .footnotes {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .markdown-body img {
+      max-width: 100%;
+    }
   </style>
 </head>
+
 <body>
-<div class="markdown-body orange"><h2>MDTU 简介</h2>
-<p>Markdown Devtool，简称 <code>MDTU</code>。是一款基于 <a href="https://github.com/bytedance/bytemd">bytemd</a><sup id="user-content-fnref-bytemd"><a href="#fn-bytemd" class="footnote-ref">[1]</a></sup> 由山月开发的支持微信样式的 Markdown 编辑器。</p>
-<h2>粗体斜体</h2>
-<p><strong>这个是粗体</strong></p>
-<p><em>这个是斜体</em></p>
-<p><strong><em>这个是粗体加斜体</em></strong></p>
-<h2>引用</h2>
-<blockquote>
-<p>欲穷千里目，更上一层楼</p>
-</blockquote>
-<blockquote>
-<blockquote>
-<p>举头望明月，低头思故乡</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>今春看又过，何日是归年</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<h2>代码</h2>
-<p><strong>内联代码</strong></p>
-<p><code>import</code></p>
-<p><strong>代码段</strong></p>
-<pre><code class="language-js hljs javascript"><span class="hljs-comment">// 如何实现一个防抖函数</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span> (<span class="hljs-params">f, wait</span>) </span>{
-  <span class="hljs-keyword">let</span> timer
-  <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> {
-    <span class="hljs-built_in">clearTimeout</span>(timer)
-    timer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> f(...args), wait)
-  }
-}
-</code></pre>
-<h2>标题</h2>
-<p>以下是关于标题的样式</p>
-<h1>一级标题</h1>
-<h2>二级标题</h2>
-<h3>三级标题</h3>
-<h2>外链</h2>
-<p>这里是<a href="https://shanyue.tech">山月的博客</a><sup id="user-content-fnref-山月的博客"><a href="#fn-山月的博客" class="footnote-ref">[1]</a></sup>，这里是山月进行了多年面试总结的<a href="https://q.shanyue.tech">前端面试题</a><sup id="user-content-fnref-前端面试题"><a href="#fn-前端面试题" class="footnote-ref">[1]</a></sup>。</p>
-<p>您可以点击编辑器右上角进行<strong>微信外链转脚注</strong>与<strong>微信外链转二维码</strong>，并点击右上角微信图标进行复制。</p>
-<p>这里是<a href="shanyue.tech">山月的博客 (不显示二维码)</a>，这里是山月进行了多年面试总结的<a href="q.shanyue.tech">前端面试题 (不显示二维码)</a>。</p>
-<p>如果链接地址不是以 <code>http</code> 开头，则不会显示它的二维码。</p>
-<h2>URL to Markdown</h2>
-<p>您可以点击 MDTU 编辑器右上角<strong>链接采集按钮</strong>，输入 URL 回车确认可从 URL 中获取 Markdown。</p>
-<picture><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/23487fbd375e42c8b1ac6410c89fb656~tplv-k3u1fbpfcp-watermark.image" alt="链接采集" class="medium-zoom-image"><figcaption>链接采集</figcaption></picture>
-<h2>多主题</h2>
-<p>UI 样式正在持续开发中。您可以添加我的微信 <code>shanyue94</code> 加入 Markdown Devtool 技术交流群进行交流。</p>
-<h2>赞赏</h2>
-<p>如果该工具对你有所帮助，可以请我喝一瓶<del>农夫山泉</del>冰露 (别人说农夫山泉太奢侈，这里改成冰露吧)</p>
-<picture><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/263bac43ead842bab0efbf6a431f4e32~tplv-k3u1fbpfcp-watermark.image" alt="请我喝一瓶冰露" class="medium-zoom-image"><figcaption>请我喝一瓶冰露</figcaption></picture>
-<h2>交流</h2>
-<p>欢迎扫码添加我的微信，加入 MDTU 编辑器交流群</p>
-<picture><img src="https://shanyue.tech/wechat.jpeg" alt="shanyue94" class="medium-zoom-image"><figcaption>shanyue94</figcaption></picture>
-<div class="footnotes">
-<hr>
-<ol>
-<li id="user-content-fn-bytemd">bytemd: https://github.com/bytedance/bytemd<a href="#fnref-bytemd" class="footnote-backref">↩</a></li>
-<li id="user-content-fn-山月的博客">山月的博客: https://shanyue.tech<a href="#fnref-%E5%B1%B1%E6%9C%88%E7%9A%84%E5%8D%9A%E5%AE%A2" class="footnote-backref">↩</a></li>
-<li id="user-content-fn-前端面试题">前端面试题: https://q.shanyue.tech<a href="#fnref-%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98" class="footnote-backref">↩</a></li>
-</ol>
-</div><!--6--></div>
-<script>
-  const theme = location.hash.slice(1)
-  window.onload = () => {
-    if (theme) {
-      const style = document.createElement('link')
-      style.rel = 'stylesheet' 
-      style.href = `./themes/${theme}.css`
-      document.head.appendChild(style)
+  <div class="markdown-body purple">
+    <h2>MDTU 简介</h2>
+    <p>Markdown Devtool，简称 <code>MDTU</code>。是一款基于 <a href="https://github.com/bytedance/bytemd">bytemd</a>
+      由山月开发的支持微信样式的 Markdown 编辑器。</p>
+    <div class="qrcode-box">
+      <div class="qrcode-text">
+        <p>长按识别二维码查看原文</p>
+        <span>https://github.com/bytedance/bytemd</span><span>标题：bytemd</span>
+      </div>
+      <div class="qrcode-img">
+        <img alt="https://github.com/bytedance/bytemd"
+          src="https://devtool.tech/api/qrcode?data=https%3A%2F%2Fgithub.com%2Fbytedance%2Fbytemd"
+          class="medium-zoom-image">
+      </div>
+    </div>
+    <h2>粗体斜体</h2>
+    <p><strong>这个是粗体</strong></p>
+    <p><em>这个是斜体</em></p>
+    <p><strong><em>这个是粗体加斜体</em></strong></p>
+    <h2>列表</h2>
+    <p><strong>有序列表</strong></p>
+    <ol>
+      <li>一</li>
+      <li>二</li>
+      <li>三</li>
+    </ol>
+    <p><strong>无序列表</strong></p>
+    <ul>
+      <li>一</li>
+      <li>一</li>
+      <li>一</li>
+    </ul>
+    <h2>引用</h2>
+    <blockquote>
+      <p>欲穷千里目，更上一层楼</p>
+    </blockquote>
+    <blockquote>
+      <blockquote>
+        <p>举头望明月，低头思故乡</p>
+      </blockquote>
+    </blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <p>今春看又过，何日是归年</p>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+    <h2>代码</h2>
+    <p><strong>内联代码</strong></p>
+    <p><code>import</code></p>
+    <p><strong>代码段</strong></p>
+    <pre><code class="language-js hljs javascript"><span class="hljs-comment">// 如何实现一个防抖函数</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">debounce</span> (<span class="hljs-params">f, wait</span>) </span>{
+      <span class="hljs-keyword">let</span> timer
+      <span class="hljs-keyword">return</span> <span class="hljs-function">(<span class="hljs-params">...args</span>) =&gt;</span> {
+        <span class="hljs-built_in">clearTimeout</span>(timer)
+        timer = <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> f(...args), wait)
+      }
     }
-  }
-</script>
+    </code></pre>
+    <h2>标题</h2>
+    <p>以下是关于标题的样式</p>
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h2>外链</h2>
+    <p>这里是<a href="https://shanyue.tech">山月的博客</a>，这里是山月进行了多年面试总结的<a href="https://q.shanyue.tech">前端面试题</a>。</p>
+    <div class="qrcode-box">
+      <div class="qrcode-text">
+        <p>长按识别二维码查看原文</p>
+        <span>https://shanyue.tech</span><span>标题：山月的博客</span>
+      </div>
+      <div class="qrcode-img">
+        <img alt="https://shanyue.tech" src="https://devtool.tech/api/qrcode?data=https%3A%2F%2Fshanyue.tech"
+          class="medium-zoom-image">
+      </div>
+    </div>
+    <div class="qrcode-box">
+      <div class="qrcode-text">
+        <p>长按识别二维码查看原文</p>
+        <span>https://q.shanyue.tech</span><span>标题：前端面试题</span>
+      </div>
+      <div class="qrcode-img">
+        <img alt="https://q.shanyue.tech" src="https://devtool.tech/api/qrcode?data=https%3A%2F%2Fq.shanyue.tech"
+          class="medium-zoom-image">
+      </div>
+    </div>
+    <p>您可以点击编辑器右上角进行<strong>微信外链转脚注</strong>与<strong>微信外链转二维码</strong>，并点击右上角微信图标进行复制。</p>
+    <p>这里是<a href="shanyue.tech">山月的博客 (不显示二维码)</a>，这里是山月进行了多年面试总结的<a href="q.shanyue.tech">前端面试题 (不显示二维码)</a>。</p>
+    <p>如果链接地址不是以 <code>http</code> 开头，则不会显示它的二维码。</p>
+    <h2>URL to Markdown</h2>
+    <p>您可以点击 MDTU 编辑器右上角<strong>链接采集按钮</strong>，输入 URL 回车确认可从 URL 中获取 Markdown。</p>
+    <picture><img
+        src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/23487fbd375e42c8b1ac6410c89fb656~tplv-k3u1fbpfcp-watermark.image"
+        alt="链接采集" class="medium-zoom-image">
+      <figcaption>链接采集</figcaption>
+    </picture>
+    <h2>多主题</h2>
+    <p>UI 样式正在持续开发中。您可以添加我的微信 <code>shanyue94</code> 加入 Markdown Devtool 技术交流群进行交流。</p>
+    <h2>赞赏</h2>
+    <p>如果该工具对你有所帮助，可以请我喝一瓶<del>农夫山泉</del>冰露 (别人说农夫山泉太奢侈，这里改成冰露吧)</p>
+    <picture><img
+        src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/263bac43ead842bab0efbf6a431f4e32~tplv-k3u1fbpfcp-watermark.image"
+        alt="请我喝一瓶冰露" class="medium-zoom-image">
+      <figcaption>请我喝一瓶冰露</figcaption>
+    </picture>
+    <h2>交流</h2>
+    <p>欢迎扫码添加我的微信，加入 MDTU 编辑器交流群</p>
+    <picture><img src="https://shanyue.tech/wechat.jpeg" alt="shanyue94" class="medium-zoom-image">
+      <figcaption>shanyue94</figcaption>
+    </picture>
+    <!--2-->
+  </div>
+  <script>
+    const theme = location.hash.slice(1)
+    window.onload = () => {
+      if (theme) {
+        const style = document.createElement('link')
+        style.rel = 'stylesheet'
+        style.href = `./themes/${theme}.css`
+        document.head.appendChild(style)
+      }
+    }
+  </script>
 </body>
+
 </html>
