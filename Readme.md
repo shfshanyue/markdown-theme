@@ -1,10 +1,10 @@
-![](https://badgen.net/npm/dm/markdown-theme)
-![](https://badgen.net/jsdelivr/hits/npm/markdown-theme)
+[![](https://badgen.net/npm/dm/markdown-theme))(https://www.npmjs.com/package/markdown-theme)
+[![](https://badgen.net/jsdelivr/hits/npm/markdown-theme)](https://cdn.jsdelivr.net/npm/markdown-theme@0.1.4/dist/)
 ![](https://badgen.net/bundlephobia/minzip/markdown-theme)
 
 # Markdown Themes
 
-Use [precss](https://github.com/jonathantneal/precss) (- sass like syntax) and [tailwindcss](https://tailwindcss.com/) develop markdown themes.
+使用 [precss](https://github.com/jonathantneal/precss) (- sass like 语法) 与 [tailwindcss](https://tailwindcss.com/) 开发 Markdown 的丰富主题。
 
 | Theme                  | 中文  | Author                                                                                  | Preview                                                              |
 |------------------------|-----|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------|
@@ -22,20 +22,55 @@ Use [precss](https://github.com/jonathantneal/precss) (- sass like syntax) and [
 $ yarn add markdown-theme
 ```
 
+通过引入 CSS 使用:
+
 ``` js
-import 'markdown-theme/themes/github'
+import 'markdown-theme/themes/github.css'
 ```
 
+通过引入 JS 使用(以字符串的形式引入):
+
+``` js
+import 'markdown-theme/dist/github.js'
+
+// 列出所有的 Markdown 主题, name 为所在的文件路径，cn 为其中文名陈
+import themes from 'markdown-theme'
+{
+  "github": {
+    "name": "github"
+  },
+  "shanchui": {
+    "name": "shanchui",
+    "cn": "山吹"
+  },
+  "shanyue": {
+    "name": "shanyue",
+    "cn": "山月"
+  },
+  "condensed-night-purple": {
+    "name": "condensed-night-purple",
+    "cn": "凝夜紫"
+  },
+  "chocolate": {
+    "name": "chocolate",
+    "cn": "巧克力"
+  },
+  "v-green": {
+    "name": "v-green",
+    "cn": "微绿"
+  }
+}
+```
 ### With CDN
 
 ``` html
 <link href="https://cdn.jsdelivr.net/npm/markdown-theme/themes/github.css" rel="stylesheet">
 ```
 
-## Development
+## 开发一个主题
 
-1. `npm run watch` and `npm run dev` in another
-1. Write css to src dictionry optionaly with sass-like syntax (precss) and tailwindcss
-1. Go to `http://localhost:5000#THEME_PATH` preview, eg. `http://localhost:5000#github`
-1. `npm run build`
-1. Sumbit a PR
+1. `npm run watch` 监听文件变动，并在另外一个终端 `npm run dev` 启动服务
+1. 使用 `sass-like` 的语法和 `tailwindcss` 开发 CSS 主题，并把该文件保存在 `src` 目录下
+1. 在浏览器输入 `http://localhost:5000#THEME_PATH` 进行主题预览，其中 `THEME_PATH` 是你新建的主题文件, eg. `http://localhost:5000#github`
+1. `npm run build`，生成纯 CSS 及纯 JS 文件
+1. 提交一个 PR
