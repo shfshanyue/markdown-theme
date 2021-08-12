@@ -1,4 +1,4 @@
-[![](https://badgen.net/npm/dm/markdown-theme))(https://www.npmjs.com/package/markdown-theme)
+[![](https://badgen.net/npm/dm/markdown-theme)](https://www.npmjs.com/package/markdown-theme)
 [![](https://badgen.net/jsdelivr/hits/npm/markdown-theme)](https://cdn.jsdelivr.net/npm/markdown-theme@0.1.4/dist/)
 ![](https://badgen.net/bundlephobia/minzip/markdown-theme)
 
