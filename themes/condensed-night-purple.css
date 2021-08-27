@@ -78,7 +78,7 @@
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 1em;
   color: #916dd5;
-  word-break: break-word;
+  word-break: break-all;
   overflow-x: auto;
   background-color: none;
   border-radius: 2px;
