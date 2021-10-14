@@ -160,9 +160,12 @@
   line-height: 26px;
 }
 
-.markdown-body ol,
-  .markdown-body ul {
-  padding-left: 22px;
+.markdown-body ol {
+  padding-left: 36px;
+}
+
+.markdown-body ul {
+  padding-left: 24px;
 }
 
 .markdown-body ol li, .markdown-body ul li {
@@ -186,10 +189,6 @@
     .markdown-body ul ul,
     .markdown-body ul ol {
   margin-top: 3px;
-}
-
-.markdown-body ol li {
-  padding-left: 6px;
 }
 
 .markdown-body b,

@@ -157,9 +157,16 @@ $a-hover-active-color: #773098;
     }
   }
 
+  ol {
+    padding-left: 36px;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+
   ol,
   ul {
-    padding-left: 22px;
     li {
       margin-bottom: 0;
       list-style: inherit;
@@ -176,9 +183,6 @@ $a-hover-active-color: #773098;
     ol {
       margin-top: 3px;
     }
-  }
-  ol li {
-    padding-left: 6px;
   }
 
   b,
