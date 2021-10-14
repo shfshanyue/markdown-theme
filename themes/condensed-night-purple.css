@@ -73,14 +73,13 @@
 }
 
 .markdown-body code {
-  padding: 0.2em 0.5em;
   font-weight: bold;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 1em;
   color: #916dd5;
   word-break: break-all;
   overflow-x: auto;
-  background-color: none;
+  background-color: transparent;
   border-radius: 2px;
 }
 
@@ -164,7 +163,6 @@
 .markdown-body ol,
   .markdown-body ul {
   padding-left: 22px;
-  list-style-type: circle;
 }
 
 .markdown-body ol li, .markdown-body ul li {

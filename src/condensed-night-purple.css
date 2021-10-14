@@ -160,7 +160,6 @@ $a-hover-active-color: #773098;
   ol,
   ul {
     padding-left: 22px;
-    list-style-type: circle;
     li {
       margin-bottom: 0;
       list-style: inherit;
