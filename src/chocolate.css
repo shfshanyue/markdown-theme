@@ -9,11 +9,6 @@ $line-space: 22px;
   overflow: hidden;
   line-height: 1.75;
   font-size: 15px;
-  background-image:
-    linear-gradient(90deg, rgba(72, 42, 10, 0.05) 5%, rgba(72, 42, 10, 0) 5%),
-    linear-gradient(360deg, rgba(72, 42, 10, 0.05) 5%, rgba(72, 42, 10, 0) 5%);
-  background-size: 20px 20px;
-  background-position: center center;
   padding-top: 0 !important;
   h1,
   h2,
