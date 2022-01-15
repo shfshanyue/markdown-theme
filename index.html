@@ -212,6 +212,9 @@
       <li>
         <a href="/#v-green">V-Green</a>
       </li>
+      <li>
+        <a href="/#menglv">萌绿</a>
+      </li>
     </ul>
     <p>Markdown Devtool，简称 <code>MDTU</code>。是一款基于 <a href="https://github.com/bytedance/bytemd">bytemd</a>
       由山月开发的支持微信样式的 Markdown 编辑器。</p>
@@ -326,7 +329,7 @@
     <!--2-->
   </div>
   <script>
-    const theme = location.hash.slice(1)
+    const theme = location.hash.slice(1) || 'github'
     window.onload = () => {
       if (theme) {
         const style = document.createElement('link')

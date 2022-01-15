@@ -21,5 +21,9 @@
   "v-green": {
     "name": "v-green",
     "cn": "微绿"
+  },
+  "menglv": {
+    "name": "menglv",
+    "cn": "萌绿"
   }
 }
