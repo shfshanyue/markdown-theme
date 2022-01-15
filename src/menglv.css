@@ -8,6 +8,10 @@
 .markdown-body li + li {
   margin-top: 0.25em;
 }
+.markdown-body ol ol, .markdown-body ol ul, .markdown-body ul ol, .markdown-body ul ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 .markdown-body blockquote,
 .markdown-body details,
 .markdown-body dl,
