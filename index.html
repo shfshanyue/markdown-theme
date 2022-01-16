@@ -3,191 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <style>
-    .markdown-body {
-      width: 800px;
-      margin: 0 auto;
-    }
-
-    .popup-arrow {
-      --tw-text-opacity: 1;
-      color: rgba(160, 174, 192, var(--tw-text-opacity));
-    }
-
-    .bytemd {
-      height: calc(100vh - 45px);
-      margin: 0 1px;
-    }
-
-    .markdown-body h1 {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
-      font-weight: 600;
-    }
-
-    .markdown-body h2 {
-      font-size: 1.25rem;
-      line-height: 1.75rem;
-      font-weight: 500;
-    }
-
-    .markdown-body h3 {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-      font-weight: 500;
-    }
-
-    .markdown-body .heading-number {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    }
-
-    .markdown-body picture img {
-      border-radius: 6px;
-      display: block;
-      margin: 10px auto;
-      object-fit: contain;
-      box-shadow: 2px 4px 7px #999;
-    }
-
-    .markdown-body picture {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-align-items: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      margin-top: 6px;
-      margin-bottom: 6px;
-    }
-
-    .markdown-body .qrcode-box {
-      border-radius: 0.25rem;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      padding: 1rem;
-      color: rgba(113, 128, 150, 1);
-      background-color: rgb(246, 246, 246);
-      border: 1px solid #efefef;
-    }
-
-    .markdown-body blockquote .qrcode-box {
-      background-color: transparent;
-      border: 1px solid #e3e3e3;
-    }
-
-    .markdown-body .qrcode-text {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-pack: space-around;
-      -webkit-justify-content: space-around;
-      -ms-flex-pack: space-around;
-      justify-content: space-around;
-      word-break: break-all;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      width: calc(100% - 96px);
-      color: #718096;
-    }
-
-    .markdown-body .qrcode-text span {
-      height: 1.25rem;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .markdown-body .qrcode-img {
-      width: 90px;
-      height: 90px;
-      margin-left: 4px;
-      -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-      flex-shrink: 0;
-    }
-
-    .markdown-body .qrcode-img img {
-      margin: auto;
-    }
-
-    .markdown-body .qrcode-box p {
-      margin: 0px;
-    }
-
-    .markdown-body pre {
-      border-radius: 0.375rem;
-      --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    }
-
-    .markdown-body pre,
-    .markdown-body pre code.hljs {
-      display: block;
-      overflow-x: auto;
-      color: #abb2bf;
-      background: #282c34;
-      padding: 0;
-    }
-
-    .markdown-body pre code.hljs {
-      padding: 12px;
-      padding-top: 6px;
-      font-size: 0.85em;
-    }
-
-    .markdown-body pre::before {
-      content: '';
-      display: block;
-      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAcCAYAAACERFoMAAAFdklEQVRoQ+2aTWwTRxiGv5nddez1/jjGAYJDEwhSCRzDjUKDgFagVAgQ7aURvVDEFXFFCHGlXBHiUkQvLSIIkYLagBpA3MgR0koEEogJEMfx/njX8e7OVLuOU0jjkKzXaSOtzzuzj+fd79U7Mx+C8LeiVgAtlvZxZye3plHcboPTgSik3HEUQZYFZujtlPZo2+Cgtdi56vHc40ud3Cpe2U4c0oEQKvNRmsUMHpo05Efbjv+3fJ2XOrm3ycJ2SlEHoPL6AYUsQnRoLBd/BIvk+6hgI7s/38Uw6CShdB/LMlqE4yIsg2Pu+2yHmCXLKtm2I2KE7jgOvdB27/4f9RCk2pzPrrTv4lw+QvdxLNYiESbCMjDDB2ap5JQsm4gYozuWQy9sOjq8rHzpnz/dBRx7kjpkH8OxGo6wEcSW14/axCQlu+RYtogYfAc5zg9jR/4cWGj9qgo28uWOZkSYyxjDTlkUxHgsChjjeecihEDBLIKi6Roh8IBi51jbbw/H6yncyNXWZgD2MgK0MyFxosCzgPH8f4cQCrphQ161NAr0AYB9rK1ntK58rdc7mm3AlwHBzgYpLrLxKKAqfJRQsApFKKkFDQDuswXy/WjP0Lx88/5Dt6oQhl5J4OWEJH60Ct8XJq9qVNUNhRI4VK9qc6uKRdAriZzcKEWWxDellqiqWYpN4VC9qs2rKpbp5cSY3CALS+KbVnRqqaaCKDk4X7X9a7IZsfpTjTLDx6K+isQwi5CdUhxKYG/QorliMQj6m5INTDzG+uIrmDZM5KYdh8LeoEVzxaIM7o+tkhmWb/DFZxvTYGYVBwPdM1e0DwQr2yB+mmqUE37FqhDOiJanmGwJyh49G6Ts01SyIeFXrAqfK1o2N50HZG8Jyh7LNoieRpNSwq9YFT5XtOKkmmcR3TJ6+B97/ECw0b1dfZIQ279UG6z2GZXt0bzd2j/Q7etTmzNo5Gp7nyRw+5dqg9Xe7dmjbt1u6xkOhC99fWsfJ0b3L9UGq/F59qgXf80cevJV5ZlZwbw0yKKbLWtXi0EsbmWOsTfvNMemB2q1Ri8NYnTzk3V8oHwvXxuaReiBWq1xJg3eFNKpQPn0TFYDyz6Q+eYvL93OCvbqi65bsiR0i3E+SL1AKxigqHrf+t8HZr8SPy8Y/WnTrYTIdUsC52d41TGqbkFes/pav31WE1+6d+utBinezYleYg/sZ2kmTKuFvkqVeYK5m+KmpGC2rG1iqkV3vwRu5B97M+FM5PSY3821tymO5c1PmnmmWnT3z0fh5bjhTJqJmN/NtbspHk8aptDSxFSL7n753Mivj004zTk+Nnh80PIEe7Wnqwtz+Ma61amE34kXGvf6XTZPLHJw/d2BBTeF1eZ4cXVTF8egG+k1sbrwZd6aecuhBzf0PPPF13JtcxfiuBt8c7IufMZ4Lk8ty4v5nmAv9uw4IfD8+VSjHKwfziiQnVIM3TBObbj78KKfD2L4x40nRCFyvqkxUhe+iamSoemlU+3fPffFl/6l4wQrRM9HV0l14StOqoatF09lvh666Ak2snvHaVkSzgaVDueK4qZFRdXPtN17eM6PYM+vtJ9OSNzZoNLhXAY3LeZV68zGo8O++NLXOk5zMn82qHQ4l89Li4pxJnNk6FwoGACsOMFCS1xhlhiGjhUWOsJYv8JivRftw43zytk4l5NieDTlJ8FWxiz70ZT74vDwtxbJAOpy+KsVb2cOP5k9nA6vV/7P1ys5Nc/CAtcrFWtEGMILTJ/FFtgF5qTiYPqRC8wKY9gi4FOtmWE1twhopoLIIlsEZkULm3BqUm1Zm3DeJw3b3GrSDZatzW0uZthIWptw7p3Zm4T+GSC8ua6NpLVhhqODXoG/AV56X1lhWm2vAAAAAElFTkSuQmCC");
-      height: 30px;
-      width: 100%;
-      background-size: 40px;
-      background-repeat: no-repeat;
-      background-color: #282c34;
-      margin-bottom: -7px;
-      border-radius: 5px;
-      background-position: 10px 10px;
-    }
-
-    .markdown-body .svg-markmap-box {
-      min-height: 20rem;
-      width: 100%;
-    }
-
-    .markdown-body .footnote-backref {
-      display: none;
-    }
-
-    .markdown-body .footnotes {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-    }
-
-    .markdown-body img {
-      max-width: 100%;
-    }
-  </style>
+  <link rel="stylesheet" href="themes/base.css">
 </head>
 
 <body>
@@ -320,13 +136,48 @@
     <p>如果链接地址不是以 <code>http</code> 开头，则不会显示它的二维码。</p>
     <h2>URL to Markdown</h2>
     <p>您可以点击 MDTU 编辑器右上角<strong>链接采集按钮</strong>，输入 URL 回车确认可从 URL 中获取 Markdown。</p>
-    <picture><img
+    <figure><img
         src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/23487fbd375e42c8b1ac6410c89fb656~tplv-k3u1fbpfcp-watermark.image"
         alt="链接采集" class="medium-zoom-image">
       <figcaption>链接采集</figcaption>
-    </picture>
+    </figure>
     <h2>多主题</h2>
-    <p>UI 样式正在持续开发中。您可以添加我的微信 <code>shanyue94</code> 加入 Markdown Devtool 技术交流群进行交流。</p>
+    <table>
+      <thead>
+        <tr>
+          <td>Theme</td>
+          <td>中文</td>
+          <td>Author</td>
+          <td>Preview</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>github</td>
+          <td>\-</td>
+          <td>[sindresorhus/github-markdown-css](https://github.com/sindresorhus/github-markdown-css)</td>
+          <td>[Preview](https://markdown-theme.vercel.app/#github)</td>
+        </tr>
+        <tr>
+          <td>shanchui</td>
+          <td>山吹</td>
+          <td>[#66CCFF](https://github.com/elyhg)</td>
+          <td>[Preview](https://markdown-theme.vercel.app/#shanchui)</td>
+        </tr>
+        <tr>
+          <td>shanyue</td>
+          <td>山月</td>
+          <td>[shanyue](https://github.com/shfshanyue)</td>
+          <td>[Preview](https://npm.devtool.tech/lodash)</td>
+        </tr>
+        <tr>
+          <td>condensed-night-purple</td>
+          <td>凝夜紫</td>
+          <td>[童欧巴](https://github.com/Geekhyt)</td>
+          <td>[Preview](https://markdown-theme.vercel.app/#condensed-night-purple)</td>
+        </tr>
+      </tbody>
+    </table>
     <h2>赞赏</h2>
     <p>如果该工具对你有所帮助，可以请我喝一瓶<del>农夫山泉</del>冰露 (别人说农夫山泉太奢侈，这里改成冰露吧)</p>
     <figure>
@@ -337,9 +188,27 @@
     </figure>
     <h2>交流</h2>
     <p>欢迎扫码添加我的微信，加入 MDTU 编辑器交流群</p>
-    <picture><img src="https://shanyue.tech/wechat.jpeg" alt="shanyue94" class="medium-zoom-image">
+    <figure>
+      <img src="https://shanyue.tech/wechat.jpeg" alt="shanyue94" class="medium-zoom-image">
       <figcaption>shanyue94</figcaption>
-    </picture>
+    </figure>
+    <div class="footnotes-title">参考资料</div>
+    <div class="footnotes">
+      <div class="footnote-item">
+        <span class="footnote-num">[1]</span>
+        <p>
+          <span class="footnote-title">bytemd:</span>
+          <span class="footnote-link">https://github.com/bytedance/bytemd</span>
+        </p>
+      </div>
+      <div class="footnote-item">
+        <span class="footnote-num">[2]</span>
+        <p>
+          <span class="footnote-title">markdown-theme:</span>
+          <span class="footnote-link">https://github.com/shfshanyue/markdown-theme</span>
+        </p>
+      </div>
+    </div>
     <!--2-->
   </div>
   <script>

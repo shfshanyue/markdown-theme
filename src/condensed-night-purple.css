@@ -202,6 +202,25 @@ $a-hover-active-color: #773098;
     color: $i-em-color;
   }
 
+  .footnote-num {
+    color: $a-color;
+    opacity: .8;
+  }
+
+  .footnote-link,
+  .footnote-title {
+    color: $a-color;
+    display: block;
+  }
+
+  .footnote-title {
+    font-weight: bold;
+  }
+
+  .footnote-link {
+    border: 0;
+  }
+
   @media (max-width: 720px) {
     h1 {
       font-size: 24px;
