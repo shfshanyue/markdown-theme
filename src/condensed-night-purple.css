@@ -50,7 +50,7 @@ $a-hover-active-color: #773098;
 
   p {
     line-height: inherit;
-    margin-top: $line-space;
+    margin-top: 10px;
     margin-bottom: $line-space;
   }
 
