@@ -1,5 +1,4 @@
 $monospace-font: Menlo, Monaco, Consolas, 'Courier New', monospace;
-$line-space: 22px;
 $h1-color: #773098;
 $h2-color: #916dd5;
 $h3-color: #d89cf6;
@@ -21,13 +20,16 @@ $a-hover-active-color: #773098;
 
   h1 {
     font-size: 25px;
-    margin-bottom: 5px;
+    margin-top: 24px;
+    margin-bottom: 20px;
     font-weight: bold;
     padding-left: 10px;
     border-left: 5px solid $h1-color;
   }
   h2 {
     font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 20px;
     font-weight: bold;
     padding-left: 10px;
     border-left: 5px solid $h2-color;
@@ -35,23 +37,30 @@ $a-hover-active-color: #773098;
   h3 {
     font-size: 16px;
     font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 20px;
     padding-left: 10px;
     border-left: 5px solid $h3-color;
   }
   h4 {
     font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 20px;
   }
   h5 {
     font-size: 15px;
+    margin-top: 24px;
+    margin-bottom: 20px;
   }
   h6 {
-    margin-top: 5px;
+    margin-top: 24px;
+    margin-bottom: 20px;
   }
 
   p {
     line-height: inherit;
-    margin-top: 10px;
-    margin-bottom: $line-space;
+    margin-top: 0;
+    margin-bottom: 20px;
   }
 
   img {
@@ -139,7 +148,7 @@ $a-hover-active-color: #773098;
   blockquote {
     color: #666;
     padding: 1px 23px;
-    margin: 22px 0;
+    margin: 20px 0;
     border-left: 4px solid #d89cf6;
     background-color: #f4eeff;
     &::after {
@@ -162,8 +171,7 @@ $a-hover-active-color: #773098;
 
   ol,
   ul {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 
     li {
       margin-bottom: 0;
@@ -231,5 +239,10 @@ $a-hover-active-color: #773098;
     h3 {
       font-size: 18px;
     }
+  }
+
+  .qrcode-box,
+  .figure {
+    margin-bottom: 20px;
   }
 }

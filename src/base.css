@@ -3,13 +3,13 @@
 }
 
 .markdown-body h1 {
-  @apply my-5 text-3xl font-semibold;
+  @apply text-3xl font-semibold;
 }
 .markdown-body h2 {
-  @apply my-3 text-xl font-medium;
+  @apply text-2xl font-medium;
 }
 .markdown-body h3 {
-  @apply my-2 text-lg font-medium;
+  @apply text-xl font-medium;
 }
 
 .markdown-body .heading-number {
